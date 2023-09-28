@@ -38,18 +38,18 @@ public class DesafioJava {
                     
                     Digite a opção desejada:     
                     """);
-            int opcao = leitura.nextInt();
+            String opcao = leitura.nextLine();
             switch (opcao) {
-                case 1:
+                case "1":
                     System.out.println(String.format("\nSaldo atual: R$ %.2f", saldo));
                     break;
-                case 2:
+                case "2":
                     System.out.printf("Digite o valor a receber: ");
                     double valorRecebido = leitura.nextDouble();
                     saldo += valorRecebido;
                     System.out.println(String.format("\nValor de R$ %.2f recebido com sucesso.", valorRecebido));
                     break;
-                case 3:
+                case "3":
                     System.out.printf("Digite o valor a transferir: ");
                     double valorTransferido = leitura.nextDouble();
                     if ((saldo - valorTransferido) >= 0) {
@@ -59,12 +59,12 @@ public class DesafioJava {
                         System.out.println("\nSaldo insuficiente para transferência.");
                     }
                     break;
-                case 4:
-                    System.out.println("Obrigado por usar nosso aplicativo!");
+                case "4":
+                    System.out.println("\nObrigado por usar nosso aplicativo!");
                     var = false;
                     break;
                 default:
-                    System.out.println("Digite uma opção válida.");
+                    System.out.println("\nDigite uma opção válida.");
                     break;
             }
         }
