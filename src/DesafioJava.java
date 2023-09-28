@@ -52,7 +52,7 @@ public class DesafioJava {
                 case "3":
                     System.out.printf("Digite o valor a transferir: ");
                     double valorTransferido = leitura.nextDouble();
-                    if ((saldo - valorTransferido) >= 0) {
+                    if (valorTransferido <= saldo) {
                         saldo -= valorTransferido;
                         System.out.println(String.format("\nValor de R$ %.2f transferido com sucesso.", valorTransferido));
                     } else {
