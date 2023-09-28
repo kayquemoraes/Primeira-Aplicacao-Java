@@ -52,8 +52,12 @@ public class DesafioJava {
                 case 3:
                     System.out.printf("Digite o valor a transferir: ");
                     double valorTransferido = leitura.nextDouble();
-                    saldo -= valorTransferido;
-                    System.out.println(String.format("\nValor de R$ %.2f transferido com sucesso.", valorTransferido));
+                    if ((saldo - valorTransferido) >= 0) {
+                        saldo -= valorTransferido;
+                        System.out.println(String.format("\nValor de R$ %.2f transferido com sucesso.", valorTransferido));
+                    } else {
+                        System.out.println("\nSaldo insuficiente para transferência.");
+                    }
                     break;
                 case 4:
                     System.out.println("Obrigado por usar nosso aplicativo!");
